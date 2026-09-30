@@ -9,8 +9,8 @@ export default function App() {
   return (
     <main className="min-h-dvh bg-ground">
       <Hero />
-      <Stack />
       <Work />
+      <Stack />
       <About />
       <Background />
       <Contact />
