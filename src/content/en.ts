@@ -127,7 +127,6 @@ export const en: Content = {
     heading: 'Let’s talk.',
     sub: 'Open to full-stack roles, remote or on-site. Write in Spanish or English — whichever you prefer.',
     links: [
-      { id: 'github', label: 'GitHub' },
       { id: 'linkedin', label: 'LinkedIn' },
     ],
     cv: 'Download CV',

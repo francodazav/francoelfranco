@@ -1,4 +1,5 @@
 import type { IconName } from '../components/Icon'
+import type { LinkId } from './links'
 
 export type Lang = 'en' | 'es'
 
@@ -47,7 +48,7 @@ export type Content = {
   }
   contact: {
     eyebrow: string; heading: string; sub: string
-    links: { id: 'github' | 'linkedin'; label: string }[]
+    links: { id: LinkId; label: string }[]
     cv: string; footerLeft: string; footerRight: string
   }
 }
