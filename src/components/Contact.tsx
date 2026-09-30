@@ -1,3 +1,4 @@
+import { isExternal, links } from '../content/links'
 import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 
@@ -30,7 +31,11 @@ export function Contact() {
       <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:gap-3">
         {c.links.map((l) => (
           <a
-            key={l.id} href={l.href}
+            key={l.id}
+            href={links[l.id]}
+            {...(isExternal(links[l.id])
+              ? { target: '_blank', rel: 'noopener noreferrer' }
+              : {})}
             className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg border border-border-btn px-[22px] text-[15px] font-medium text-ink sm:h-12 sm:justify-start sm:rounded-md"
           >
             <Icon name={l.id} size={18} />
@@ -38,7 +43,7 @@ export function Contact() {
           </a>
         ))}
         <a
-          href="#cv"
+          href={links.cv}
           className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg bg-accent px-[22px] text-[15px] font-semibold text-on-accent sm:h-12 sm:justify-start sm:rounded-md"
         >
           <Icon name="download" size={18} />

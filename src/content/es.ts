@@ -131,8 +131,8 @@ export const es: Content = {
     heading: 'Hablemos.',
     sub: 'Disponible para roles full-stack, remoto o presencial. Escríbeme en español o en inglés — como prefieras.',
     links: [
-      { id: 'github', label: 'GitHub', href: '#github' },
-      { id: 'linkedin', label: 'LinkedIn', href: '#linkedin' },
+      { id: 'github', label: 'GitHub' },
+      { id: 'linkedin', label: 'LinkedIn' },
     ],
     cv: 'Descargar CV',
     footerLeft: 'franco daza · colombia / venezuela',

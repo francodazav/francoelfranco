@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { links } from '../content/links'
 import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 import { LangToggle } from './LangToggle'
@@ -125,7 +126,7 @@ export function Hero() {
               <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md">
                 {content.hero.primary}
               </a>
-              <a href="#cv" className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md">
+              <a href={links.cv} className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md">
                 <Icon name="download" size={17} />
                 {content.hero.secondary}
               </a>

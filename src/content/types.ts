@@ -47,7 +47,7 @@ export type Content = {
   }
   contact: {
     eyebrow: string; heading: string; sub: string
-    links: { id: 'github' | 'linkedin'; label: string; href: string }[]
+    links: { id: 'github' | 'linkedin'; label: string }[]
     cv: string; footerLeft: string; footerRight: string
   }
 }
