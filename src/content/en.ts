@@ -1,9 +1,10 @@
-/** All page copy in one place, so a Spanish sibling can drop in beside it. */
+import type { Content } from './types'
 
-export type Pill = { name: string; core?: boolean }
-export type StackGroup = { label: string; pills: Pill[] }
-
-export const content = {
+export const en: Content = {
+  htmlLang: 'en',
+  documentTitle: 'Franco Daza — Full-stack developer',
+  metaDescription:
+    'Franco Daza — junior full-stack developer. React, Flutter, Nest.js and Google Cloud. Currently at CoVet.',
   name: 'Franco Daza',
   role: 'Junior full-stack developer',
   location: 'Colombia / Venezuela',
@@ -14,6 +15,8 @@ export const content = {
     { id: 'about', label: 'about' },
     { id: 'contact', label: 'contact' },
   ],
+  menu: { open: 'Open menu', close: 'Close menu', theme: 'Theme', language: 'Language' },
+  themeLabels: { light: 'Light theme', dark: 'Dark theme', system: 'Match system theme' },
 
   hero: {
     headline: 'I build the API, the app, and the thing that sends the email.',
@@ -22,19 +25,27 @@ export const content = {
     secondary: 'Download CV',
   },
 
+  whoami: {
+    prompt: '$ whoami',
+    line1: 'franco daza — 29',
+    line2: 'colombian-venezuelan',
+    line3: 'junior full-stack · @covet',
+  },
   terminal: [
     { prompt: '$ experience --years', value: '2.5  →  digidea apps (1.5) · covet (1.0)' },
     { prompt: '$ stack --core', value: 'react.ts · nest.js · express.ts · flutter', tone: 'accent' },
     { prompt: '$ stack --cloud', value: 'gcloud · firestore · algolia · postmark', tone: 'accent', hideOnMobile: true },
     { prompt: '$ lang', value: 'es native · en b2' },
-  ] as { prompt: string; value: string; tone?: 'accent'; hideOnMobile?: boolean }[],
+  ],
+  status: { prompt: '$ status', value: 'open to work →' },
 
+  stackHead: { eyebrow: '// stack', heading: 'The stack.' },
   stack: [
     { label: 'Frontend', pills: [{ name: 'React.ts', core: true }, { name: 'Flutter', core: true }, { name: 'FlutterFlow' }, { name: 'HTML' }, { name: 'CSS' }, { name: 'JavaScript' }] },
     { label: 'Backend', pills: [{ name: 'Nest.js', core: true }, { name: 'Express.ts', core: true }] },
     { label: 'Cloud & services', pills: [{ name: 'Google Cloud' }, { name: 'Firestore' }, { name: 'Algolia' }, { name: 'Postmark' }] },
     { label: 'Tooling', pills: [{ name: 'Postman' }, { name: 'Insomnia' }, { name: 'Firefoo' }] },
-  ] as StackGroup[],
+  ],
 
   work: {
     eyebrow: '// work',
@@ -47,10 +58,10 @@ export const content = {
         tag: 'Flutter · NestJS · GCP',
         body: 'An AI copilot for veterinarians — it listens to the consult and writes the clinical record, so vets spend their evening at home instead of on paperwork. I work across all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console. I joined while the product was built in FlutterFlow and was part of the team’s move onto a hand-written Flutter codebase.',
         bullets: [
-          { strong: 'output-pages redesign', before: 'Led the ', after: ' — the screens where a vet reads, edits, shares and exports a generated record — shipped in six increments behind a rollout flag.' },
-          { strong: 'dental chart', before: 'Built the ', after: ' end to end: the charting UI in Flutter, and a backend PDF generator that renders separate clinical and client-facing versions.' },
-          { strong: 'roles and permissions', before: 'Extended ', after: ' across API, app and admin — support, enterprise, intern and veterinary-school accounts.' },
-          { strong: 'practice-management integrations', before: 'Shipped ', after: ': a metrics dashboard with CSV export, and record export straight into the clinic’s own system.' },
+          { before: 'Led the ', strong: 'output-pages redesign', after: ' — the screens where a vet reads, edits, shares and exports a generated record — shipped in six increments behind a rollout flag.' },
+          { before: 'Built the ', strong: 'dental chart', after: ' end to end: the charting UI in Flutter, and a backend PDF generator that renders separate clinical and client-facing versions.' },
+          { before: 'Extended ', strong: 'roles and permissions', after: ' across API, app and admin — support, enterprise, intern and veterinary-school accounts.' },
+          { before: 'Shipped ', strong: 'practice-management integrations', after: ': a metrics dashboard with CSV export, and record export straight into the clinic’s own system.' },
         ],
         chips: ['Flutter', 'Dart', 'Nest.js', 'TypeScript', 'Firestore', 'Google Cloud', 'Algolia', 'Postmark'],
       },
@@ -75,6 +86,7 @@ export const content = {
       'I started computer engineering at UNET in Venezuela and continued at UABC after moving to Mexico. COVID cut it short at nine semesters. By then I already knew what I wanted to do for a living, so I went and did it.',
       'I’m looking for my next role. I’ve built mobile, web and backend, and I’m glad to work anywhere across that range. What I care about is shipping something people actually use — vets who get their evening back, teachers who can file grades without worrying.',
     ],
+    emphasis: 'algorithm',
     quote: 'I’ve done stand-up in Venezuela, Colombia and Mexico. Reading a room and explaining a technical decision turn out to be the same skill — you have to know what the other person already knows.',
   },
 
@@ -95,9 +107,9 @@ export const content = {
     ],
     languagesNote: 'Colombian-Venezuelan, studied in Mexico and Venezuela. Building for veterinary clinics now, for Ecuadorian schools before that.',
     offTheClock: [
-      { icon: 'mic' as const, title: 'Stand-up comedy', body: 'Five minutes, no notes, a room that has to laugh. Best training I have had for standups of the other kind.' },
-      { icon: 'dumbbell' as const, title: 'CrossFit', body: 'Before work, most weeks. Showing up when it is hard turns out to be a transferable skill.' },
-      { icon: 'football' as const, title: 'Football', body: 'Weekend league. Nobody scores alone, and nobody ships alone either.' },
+      { icon: 'mic', title: 'Stand-up comedy', body: 'Five minutes, no notes, a room that has to laugh. Best training I have had for standups of the other kind.' },
+      { icon: 'dumbbell', title: 'CrossFit', body: 'Before work, most weeks. Showing up when it is hard turns out to be a transferable skill.' },
+      { icon: 'football', title: 'Football', body: 'Weekend league. Nobody scores alone, and nobody ships alone either.' },
     ],
   },
 
@@ -106,11 +118,11 @@ export const content = {
     heading: 'Let’s talk.',
     sub: 'Open to full-stack roles, remote or on-site. Write in Spanish or English — whichever you prefer.',
     links: [
-      { id: 'github' as const, label: 'GitHub', href: '#github' },
-      { id: 'linkedin' as const, label: 'LinkedIn', href: '#linkedin' },
+      { id: 'github', label: 'GitHub', href: '#github' },
+      { id: 'linkedin', label: 'LinkedIn', href: '#linkedin' },
     ],
     cv: 'Download CV',
     footerLeft: 'franco daza · colombia / venezuela',
     footerRight: 'es / en',
   },
-} as const
+}

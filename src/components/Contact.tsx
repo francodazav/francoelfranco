@@ -1,10 +1,11 @@
-import { content } from '../content/en'
+import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 
 export function Contact() {
+  const content = useContent()
   const c = content.contact
   return (
-    <section id="contact" className="mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
+    <section id="contact" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
       <div className="flex flex-col gap-2.5">
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent-ink">
           {c.eyebrow}

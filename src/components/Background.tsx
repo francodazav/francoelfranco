@@ -1,4 +1,4 @@
-import { content } from '../content/en'
+import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 import { SectionHead } from './SectionHead'
 
@@ -6,9 +6,9 @@ const card = 'flex flex-col gap-4 rounded-2xl bg-s1 p-6 shadow-[var(--shadow-car
 const cardLabel = 'font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3'
 
 export function Background() {
-  const b = content.background
+  const b = useContent().background
   return (
-    <section className="mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
+    <section id="background" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
       <SectionHead eyebrow={b.eyebrow} heading={b.heading} meta={b.meta} />
 
       <div className="mt-7 flex flex-col gap-6 sm:mt-8 lg:flex-row lg:items-stretch">

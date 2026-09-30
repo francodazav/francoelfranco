@@ -21,6 +21,11 @@
           if (t === 'light' || t === 'dark') {
             document.documentElement.setAttribute('data-theme', t)
           }
+          var l = localStorage.getItem('lang')
+          if (l !== 'en' && l !== 'es') {
+            l = (navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en'
+          }
+          document.documentElement.lang = l
         } catch (e) {
           /* private mode: fall through to the system preference */
         }

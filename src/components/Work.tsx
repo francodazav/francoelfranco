@@ -1,11 +1,11 @@
-import { content } from '../content/en'
+import { useContent } from '../lib/lang'
 import { Chip } from './Pill'
 import { SectionHead } from './SectionHead'
 
 export function Work() {
-  const { eyebrow, heading, meta, items } = content.work
+  const { eyebrow, heading, meta, items } = useContent().work
   return (
-    <section id="work" className="mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
+    <section id="work" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
       <SectionHead eyebrow={eyebrow} heading={heading} meta={meta} />
       <div className="mt-7 flex flex-col gap-6 sm:mt-8">
         {items.map((item) => (

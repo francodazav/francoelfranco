@@ -147,3 +147,31 @@
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Section sizing. The header is sticky, so a plain #anchor jump hides the
+   section's own heading underneath it - scroll-margin-top pushes the landing
+   point down by exactly the header height, and min-height makes a short
+   section fill the rest of the viewport. Sections with more content than one
+   screen (Work) simply stay taller; min-height is a floor, not a cap.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --header-h: 56px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-h: 72px;
+  }
+}
+
+@layer components {
+  .screen {
+    scroll-margin-top: var(--header-h);
+    min-height: calc(100dvh - var(--header-h));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

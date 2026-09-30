@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import { content } from '../content/en'
+import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
+import { LangToggle } from './LangToggle'
 import { Pill } from './Pill'
+import { SectionHead } from './SectionHead'
 import { ThemeToggle } from './ThemeToggle'
 import avatar from '../assets/franco.png'
 
 function Terminal() {
+  const content = useContent()
   return (
     <div className="overflow-hidden rounded-[10px] border border-border bg-terminal lg:w-[476px] lg:shrink-0">
       <div className="flex h-10 items-center gap-[7px] border-b border-line px-4">
@@ -21,11 +24,10 @@ function Terminal() {
             className="block h-[72px] w-[72px] shrink-0 object-contain sm:h-[88px] sm:w-[88px]"
           />
           <div className="flex min-w-0 flex-col gap-1">
-            <div className="text-ink-4">$ whoami</div>
-            <div className="text-ink-term">franco daza — 29</div>
-            <div className="text-ink-term sm:hidden">colombian-venezuelan</div>
-            <div className="hidden text-ink-term sm:block">· colombian-venezuelan</div>
-            <div className="text-[11px] text-ink-3 sm:text-xs">junior full-stack · @covet</div>
+            <div className="text-ink-4">{content.whoami.prompt}</div>
+            <div className="text-ink-term">{content.whoami.line1}</div>
+            <div className="text-ink-term">{content.whoami.line2}</div>
+            <div className="text-[11px] text-ink-3 sm:text-xs">{content.whoami.line3}</div>
           </div>
         </div>
         {content.terminal.map((row) => (
@@ -37,9 +39,9 @@ function Terminal() {
           </div>
         ))}
         <div>
-          <div className="text-ink-4">$ status</div>
+          <div className="text-ink-4">{content.status.prompt}</div>
           <div className="break-all text-warm">
-            open to work → {content.email}
+            {content.status.value} {content.email}
             <span className="ml-1.5 inline-block h-[15px] w-2 translate-y-[2px] bg-accent" />
           </div>
         </div>
@@ -50,6 +52,7 @@ function Terminal() {
 
 export function Hero() {
   const [open, setOpen] = useState(false)
+  const content = useContent()
   return (
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
@@ -66,34 +69,41 @@ export function Hero() {
                 </a>
               ))}
             </nav>
-            <div className="hidden md:block">
+            <div className="hidden items-center gap-2 lg:flex">
+              <LangToggle />
               <ThemeToggle />
             </div>
             <button
               type="button"
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={open ? content.menu.close : content.menu.open}
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
-              className="flex h-11 w-11 items-center justify-center text-ink-prose md:hidden"
+              className="flex h-11 w-11 items-center justify-center text-ink-prose lg:hidden"
             >
               <Icon name="menu" size={22} />
             </button>
           </div>
         </div>
         {open ? (
-          <nav id="mobile-nav" className="flex flex-col border-t border-line px-5 pb-3 md:hidden">
+          <nav id="mobile-nav" className="flex flex-col border-t border-line px-5 pb-3 lg:hidden">
             {content.nav.map((n) => (
               <a
                 key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
-                className="flex h-12 items-center font-mono text-sm text-ink-2"
+                className="flex h-12 items-center font-mono text-sm text-ink-2 md:hidden"
               >
                 {n.label}
               </a>
             ))}
-            <div className="mt-1 flex items-center justify-between border-t border-line pt-3">
+            <div className="mt-1 flex items-center justify-between gap-4 border-t border-line pt-3">
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3">
-                Theme
+                {content.menu.language}
+              </span>
+              <LangToggle />
+            </div>
+            <div className="mt-2 flex items-center justify-between gap-4">
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3">
+                {content.menu.theme}
               </span>
               <ThemeToggle />
             </div>
@@ -101,9 +111,9 @@ export function Hero() {
         ) : null}
       </header>
 
-      <section id="top" className="mx-auto max-w-[1280px] px-5 pt-7 sm:px-16 sm:pt-12">
-        <div className="flex flex-col gap-7 lg:flex-row lg:items-start lg:gap-14">
-          <div className="flex flex-col gap-4 sm:gap-6 lg:flex-1 lg:pt-2">
+      <section id="top" className="screen mx-auto max-w-[1280px] px-5 py-8 sm:px-16 sm:py-12">
+        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:gap-14">
+          <div className="flex flex-col gap-4 sm:gap-6 lg:flex-1">
             <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs">
               {content.role} · {content.location}
             </div>
@@ -127,14 +137,12 @@ export function Hero() {
         </div>
       </section>
 
-      <section id="stack" className="mx-auto mt-8 max-w-[1280px] border-t border-line px-5 py-7 sm:mt-12 sm:px-16 sm:pb-8 sm:pt-7">
-        <div className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink-3 sm:text-[11px]">
-          Stack
-        </div>
-        <div className="mt-4 flex flex-col gap-[18px] sm:mt-5 sm:gap-3.5">
+      <section id="stack" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-10 sm:px-16 sm:py-12">
+        <SectionHead eyebrow={content.stackHead.eyebrow} heading={content.stackHead.heading} />
+        <div className="mt-7 flex flex-col gap-6 sm:mt-9 sm:gap-5">
           {content.stack.map((g) => (
             <div key={g.label} className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-[18px]">
-              <div className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-accent-ink sm:w-[104px] sm:shrink-0 sm:pt-2.5 sm:text-[10px]">
+              <div className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-accent-ink sm:w-[124px] sm:shrink-0 sm:pt-2.5 sm:text-[10px]">
                 {g.label}
               </div>
               <div className="flex flex-wrap gap-2">
