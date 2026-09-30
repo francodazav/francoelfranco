@@ -4,8 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Franco." />
-    <title>Franco — Portfolio</title>
+    <meta
+      name="description"
+      content="Franco Daza — junior full-stack developer. React, Flutter, Nest.js and Google Cloud. Currently at CoVet."
+    />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F7F3" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1510" />
+    <title>Franco Daza — Full-stack developer</title>
+
+    <!-- Runs before first paint so an explicit theme choice never flashes the
+         wrong palette. Mirrors apply() in src/lib/theme.ts - keep them in step. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t)
+          }
+        } catch (e) {
+          /* private mode: fall through to the system preference */
+        }
+      })()
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
