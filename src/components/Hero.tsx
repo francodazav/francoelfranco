@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 import { LangToggle } from './LangToggle'
-import { Pill } from './Pill'
-import { SectionHead } from './SectionHead'
 import { ThemeToggle } from './ThemeToggle'
 import avatar from '../assets/franco.png'
 
@@ -137,21 +135,6 @@ export function Hero() {
         </div>
       </section>
 
-      <section id="stack" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-10 sm:px-16 sm:py-12">
-        <SectionHead eyebrow={content.stackHead.eyebrow} heading={content.stackHead.heading} />
-        <div className="mt-7 flex flex-col gap-6 sm:mt-9 sm:gap-5">
-          {content.stack.map((g) => (
-            <div key={g.label} className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-[18px]">
-              <div className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-accent-ink sm:w-[124px] sm:shrink-0 sm:pt-2.5 sm:text-[10px]">
-                {g.label}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {g.pills.map((p) => <Pill key={p.name} name={p.name} core={p.core} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   )
 }

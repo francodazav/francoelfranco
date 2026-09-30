@@ -43,13 +43,22 @@ export const es: Content = {
   ],
   status: { prompt: '$ estado', value: 'disponible para trabajar →' },
 
-  stackHead: { eyebrow: '// stack', heading: 'El stack.' },
-  stack: [
-    { label: 'Frontend', pills: [{ name: 'React.ts', core: true }, { name: 'Flutter', core: true }, { name: 'FlutterFlow' }, { name: 'HTML' }, { name: 'CSS' }, { name: 'JavaScript' }] },
-    { label: 'Backend', pills: [{ name: 'Nest.js', core: true }, { name: 'Express.ts', core: true }] },
-    { label: 'Cloud y servicios', pills: [{ name: 'Google Cloud' }, { name: 'Firestore' }, { name: 'Algolia' }, { name: 'Postmark' }] },
-    { label: 'Herramientas', pills: [{ name: 'Postman' }, { name: 'Insomnia' }, { name: 'Firefoo' }] },
+  stackHead: { eyebrow: '// stack', heading: 'Tres capas, una persona.' },
+  stackLayers: [
+    {
+      index: '01', label: 'Cliente',
+      pills: [{ name: 'React.ts', core: true }, { name: 'Flutter', core: true }, { name: 'FlutterFlow' }, { name: 'HTML' }, { name: 'CSS' }, { name: 'JavaScript' }],
+    },
+    {
+      index: '02', label: 'API',
+      pills: [{ name: 'Nest.js', core: true }, { name: 'Express.ts', core: true }],
+    },
+    {
+      index: '03', label: 'Plataforma',
+      pills: [{ name: 'Google Cloud' }, { name: 'Firestore' }, { name: 'Algolia' }, { name: 'Postmark' }],
+    },
   ],
+  stackTooling: { label: 'Herramientas', pills: [{ name: 'Postman' }, { name: 'Insomnia' }, { name: 'Firefoo' }] },
 
   work: {
     eyebrow: '// trabajo',

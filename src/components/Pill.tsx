@@ -1,4 +1,5 @@
-export function Pill({ name, core = false }: { name: string; core?: boolean }) {
+export function Pill({ name, core = false, onCard = false }:
+  { name: string; core?: boolean; onCard?: boolean }) {
   if (core) {
     return (
       <span className="inline-flex items-center gap-2 rounded-full bg-s3 px-4 py-2 font-mono text-[12.5px] font-medium text-ink">
@@ -8,7 +9,7 @@ export function Pill({ name, core = false }: { name: string; core?: boolean }) {
     )
   }
   return (
-    <span className="inline-flex items-center rounded-full bg-s1 px-[15px] py-2 font-mono text-xs text-ink-2">
+    <span className={`inline-flex items-center rounded-full ${onCard ? 'bg-s2' : 'bg-s1'} px-[15px] py-2 font-mono text-xs text-ink-2`}>
       {name}
     </span>
   )

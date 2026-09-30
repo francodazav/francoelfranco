@@ -4,6 +4,7 @@ export type Lang = 'en' | 'es'
 
 export type Pill = { name: string; core?: boolean }
 export type StackGroup = { label: string; pills: Pill[] }
+export type StackLayer = { index: string; label: string; pills: Pill[] }
 export type TerminalRow = { prompt: string; value: string; tone?: 'accent'; hideOnMobile?: boolean }
 export type Bullet = { before: string; strong: string; after: string }
 export type WorkItem = {
@@ -28,7 +29,8 @@ export type Content = {
   terminal: TerminalRow[]
   status: { prompt: string; value: string }
   stackHead: { eyebrow: string; heading: string }
-  stack: StackGroup[]
+  stackLayers: StackLayer[]
+  stackTooling: StackGroup
   work: { eyebrow: string; heading: string; meta: string; items: WorkItem[] }
   about: {
     eyebrow: string; heading: string; meta: string
