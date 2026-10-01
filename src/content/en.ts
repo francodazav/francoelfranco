@@ -13,6 +13,7 @@ export const en: Content = {
     { id: 'work', label: 'work' },
     { id: 'stack', label: 'stack' },
     { id: 'about', label: 'about' },
+    { id: 'background', label: 'background' },
     { id: 'contact', label: 'contact' },
   ],
   menu: { open: 'Open menu', close: 'Close menu', theme: 'Theme', language: 'Language' },
@@ -27,7 +28,7 @@ export const en: Content = {
 
   whoami: {
     prompt: '$ whoami',
-    line1: 'franco daza — 29',
+    line1: 'franco daza — {age}',
     line2: 'colombian-venezuelan',
     line3: 'junior full-stack · @covet',
   },
@@ -101,8 +102,16 @@ export const en: Content = {
 
   background: {
     eyebrow: '// background',
-    heading: 'Computer engineering, Venezuela and Mexico.',
-    meta: 'Education & languages',
+    heading: 'The details.',
+    meta: 'Profile, education & languages',
+    factsLabel: 'Profile',
+    facts: [
+      { label: 'Born', value: 'Venezuela' },
+      { label: 'Nationality', value: 'Colombian & Venezuelan' },
+      { label: 'Age', value: '{age}' },
+      { label: 'Availability', value: 'One month\u2019s notice' },
+      { label: 'Work', value: 'Remote' },
+    ],
     educationLabel: 'Education',
     education: [
       { what: 'Computer Engineering', where: 'UNET · Venezuela', detail: '3 semesters' },

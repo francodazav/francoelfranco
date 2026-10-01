@@ -39,6 +39,8 @@ export type Content = {
   }
   background: {
     eyebrow: string; heading: string; meta: string
+    factsLabel: string
+    facts: { label: string; value: string }[]
     educationLabel: string
     education: { what: string; where: string; detail: string }[]
     languagesLabel: string

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ageOn, BIRTH_DATE } from '../lib/age'
 import { links } from '../content/links'
 import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
@@ -24,7 +25,9 @@ function Terminal() {
           />
           <div className="flex min-w-0 flex-col gap-1">
             <div className="text-ink-4">{content.whoami.prompt}</div>
-            <div className="text-ink-term">{content.whoami.line1}</div>
+            <div className="text-ink-term">
+              {content.whoami.line1.replace('{age}', String(ageOn(BIRTH_DATE)))}
+            </div>
             <div className="text-ink-term">{content.whoami.line2}</div>
             <div className="text-[11px] text-ink-3 sm:text-xs">{content.whoami.line3}</div>
           </div>

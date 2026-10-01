@@ -1,17 +1,37 @@
+import { ageOn, BIRTH_DATE } from '../lib/age'
 import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 import { SectionHead } from './SectionHead'
 
-const card = 'flex flex-col gap-4 rounded-2xl bg-s1 p-6 shadow-[var(--shadow-card)] sm:gap-[18px] sm:px-[30px] sm:py-7'
+const card = 'flex flex-col gap-3.5 rounded-2xl bg-s1 p-6 shadow-[var(--shadow-card)] sm:gap-4 sm:px-7 sm:py-7'
 const cardLabel = 'font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3'
 
 export function Background() {
   const b = useContent().background
+  const age = String(ageOn(BIRTH_DATE))
   return (
     <section id="background" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
       <SectionHead eyebrow={b.eyebrow} heading={b.heading} meta={b.meta} />
 
       <div className="mt-7 flex flex-col gap-6 sm:mt-8 lg:flex-row lg:items-stretch">
+        <div className={`${card} lg:flex-1`}>
+          <div className={cardLabel}>{b.factsLabel}</div>
+          {b.facts.map((f, i) => (
+            <div
+              key={f.label}
+              className={[
+                'flex items-baseline justify-between gap-4',
+                i < b.facts.length - 1 ? 'border-b border-line-card pb-3.5' : '',
+              ].join(' ')}
+            >
+              <span className="font-mono text-[12.5px] text-ink-3">{f.label}</span>
+              <span className="text-right text-[15px] font-semibold text-ink">
+                {f.value.replace('{age}', age)}
+              </span>
+            </div>
+          ))}
+        </div>
+
         <div className={`${card} lg:flex-1`}>
           <div className={cardLabel}>{b.educationLabel}</div>
           {b.education.map((e, i) => (
@@ -36,7 +56,7 @@ export function Background() {
           ))}
         </div>
 
-        <div className={`${card} lg:w-[330px] lg:shrink-0`}>
+        <div className={`${card} lg:w-[300px] lg:shrink-0`}>
           <div className={cardLabel}>{b.languagesLabel}</div>
           {b.languages.map((l) => (
             <div key={l.name} className="flex items-baseline justify-between gap-4 border-b border-line-card pb-4">
