@@ -1,32 +1,44 @@
-# React + TypeScript + Vite
+# Franco Daza — portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal site. React 19 + Vite 8 + TypeScript, Tailwind CSS v4, deployed on Vercel.
 
-Currently, two official plugins are available:
+**Live:** _(pending)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Running it
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # typecheck + production build into dist/
+npm run lint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## How it's put together
+
+- **Bilingual.** All copy lives in `src/content/en.ts` and `es.ts`, both satisfying
+  one `Content` type in `types.ts` — adding a key to one fails the build until
+  the other has it. The switch persists to `localStorage` and falls back to
+  `navigator.language`; it also updates `<html lang>`, the title and the meta
+  description, not just the visible text.
+- **Theming.** 20 semantic tokens (`--ground`, `--ink`, `--accent`…) generated
+  into three states: light on bare `:root`, a `prefers-color-scheme` block, and
+  an explicit `[data-theme]`. A blocking script in `index.html` stamps the stored
+  choice before first paint so the wrong palette never flashes. Every ink/surface
+  pairing the design uses clears WCAG AA in both themes — the safe pairings are
+  documented at the top of `src/index.css`.
+- **Responsive** mobile-first, two real breakpoints: `md` for two-column content,
+  `xl` for the split hero. Below that the hero stacks.
+- **CV.** `cv/build-cv.mjs` renders one data object per language to HTML; headless
+  Chrome prints each to a one-page A4 PDF in `public/cv/`, so both carry the
+  site's own fonts. Regenerate with:
+
+  ```bash
+  node cv/build-cv.mjs && \
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+    --headless --no-pdf-header-footer --print-to-pdf=public/cv/Franco-Daza-CV-EN.pdf \
+    "file://$PWD/cv/cv-en.html"
+  ```
+
+## Licence
+
+Code is free to read and learn from. The content — copy, CV, photograph — is mine.
