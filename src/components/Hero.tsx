@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { ageOn, BIRTH_DATE } from '../lib/age'
 import { links } from '../content/links'
-import { useContent } from '../lib/lang'
+import { useContent, useLang } from '../lib/lang'
+import { bindShortWords } from '../lib/typography'
 import { Icon } from './Icon'
 import { LangToggle } from './LangToggle'
 import { ThemeToggle } from './ThemeToggle'
@@ -55,6 +56,7 @@ function Terminal() {
 export function Hero() {
   const [open, setOpen] = useState(false)
   const content = useContent()
+  const { lang } = useLang()
   return (
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
@@ -119,8 +121,8 @@ export function Hero() {
             <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs">
               {content.role} · {content.location}
             </div>
-            <h1 className="m-0 max-w-[580px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-ink text-pretty sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em]">
-              {content.hero.headline}
+            <h1 className="m-0 max-w-[580px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em]">
+              {bindShortWords(content.hero.headline, lang)}
             </h1>
             <p className="m-0 max-w-[500px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg">
               {content.hero.sub}

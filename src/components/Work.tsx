@@ -1,9 +1,11 @@
-import { useContent } from '../lib/lang'
+import { useContent, useLang } from '../lib/lang'
+import { bindShortWords } from '../lib/typography'
 import { Chip } from './Pill'
 import { SectionHead } from './SectionHead'
 
 export function Work() {
   const { eyebrow, heading, meta, items } = useContent().work
+  const { lang } = useLang()
   return (
     <section id="work" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
       <SectionHead eyebrow={eyebrow} heading={heading} meta={meta} />
@@ -16,7 +18,7 @@ export function Work() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
               <div className="flex flex-col gap-2">
                 <h3 className="m-0 text-[22px] font-bold tracking-[-0.02em] text-ink sm:text-[28px]">
-                  {item.title}
+                  {bindShortWords(item.title, lang)}
                 </h3>
                 <div className="font-mono text-[12.5px] text-accent-ink">{item.role}</div>
               </div>
@@ -37,7 +39,7 @@ export function Work() {
                     <div key={b.strong} className="flex items-start gap-3">
                       <span className="mt-[7px] h-[7px] w-[7px] shrink-0 bg-accent" />
                       <p className="m-0 text-[15px] leading-relaxed text-ink-prose">
-                        {b.before}
+                        {b.before.replace(/ $/, '\u00A0')}
                         <strong className="font-semibold text-ink">{b.strong}</strong>
                         {b.after}
                       </p>

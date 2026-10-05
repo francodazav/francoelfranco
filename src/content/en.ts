@@ -93,7 +93,7 @@ export const en: Content = {
     paragraphs: [
       'I learned to solve a Rubik’s cube when I was sixteen. What caught me wasn’t the cube — it was finding out that a scrambled mess has a method behind it, and that once you know the method you can solve any scramble, not just the one in your hands. I didn’t have the word ALGORITHM yet, but that was the moment.',
       'What I’m good at is landing in code I’ve never seen and becoming useful quickly. At CoVet that meant three codebases inside a year — a Flutter app, a TypeScript API and an internal admin console — with work shipped in all three.',
-      'I started computer engineering at UNET in Venezuela and continued at UABC after moving to Mexico. COVID cut it short at nine semesters. By then I already knew what I wanted to do for a living, so I went and did it.',
+      'I studied computer engineering at UNET in Venezuela and continued at UABC after moving to Mexico. By then I already knew what I wanted to do for a living, so I went and did it.',
       'I’m looking for my next role. I’ve built mobile, web and backend, and I’m glad to work anywhere across that range. What I care about is shipping something people actually use — vets who get their evening back, teachers who can file grades without worrying.',
     ],
     emphasis: 'algorithm',

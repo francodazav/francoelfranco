@@ -97,7 +97,7 @@ export const es: Content = {
     paragraphs: [
       'Aprendí a resolver un cubo de Rubik a los dieciséis. Lo que me atrapó no fue el cubo — fue descubrir que un desorden tiene un método detrás, y que una vez que conoces el método puedes resolver cualquier combinación, no solo la que tienes en las manos. Todavía no tenía la palabra ALGORITHM, pero ese fue el momento.',
       'En lo que soy bueno es en caer en código que nunca había visto y volverme útil rápido. En CoVet eso fueron tres repositorios en un año — una app en Flutter, una API en TypeScript y una consola de administración interna — con trabajo entregado en los tres.',
-      'Empecé ingeniería en computación en la UNET en Venezuela y seguí en la UABC después de mudarme a México. El COVID lo cortó en el noveno semestre. A esa altura ya sabía a qué me quería dedicar, así que me fui a hacerlo.',
+      'Estudié ingeniería en computación en la UNET en Venezuela y seguí en la UABC después de mudarme a México. A esa altura ya sabía a qué me quería dedicar, así que me fui a hacerlo.',
       'Estoy buscando mi próximo rol. He construido móvil, web y backend, y me acomodo en cualquier punto de ese rango. Lo que me importa es entregar algo que la gente use de verdad — veterinarios que recuperan su tarde, docentes que cargan notas sin miedo.',
     ],
     emphasis: 'algoritmo',

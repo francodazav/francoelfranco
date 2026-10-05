@@ -175,3 +175,25 @@
     justify-content: center;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Line breaking. Two problems this fixes:
+   - last lines left with one short word ("a tiempo.", "el momento.")
+   - headings broken into lopsided lines
+   `pretty` lets the browser retry a paragraph's last lines; `balance` evens a
+   heading's line lengths. `hyphens: auto` matters most in Spanish, whose long
+   words strand a lot of space in the narrow two-column prose - it needs the
+   right `lang` on <html>, which the language switch already sets.
+   --------------------------------------------------------------------------- */
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+    hyphens: auto;
+  }
+}
