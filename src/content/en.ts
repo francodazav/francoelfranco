@@ -126,7 +126,7 @@ export const en: Content = {
     languagesNote: 'Colombian-Venezuelan, studied in Mexico and Venezuela. Building for veterinary clinics now, for Ecuadorian schools before that.',
     offTheClock: [
       { icon: 'mic', title: 'Stand-up comedy', body: 'Five minutes, no notes, a room that has to laugh. Best training I have had for standups of the other kind.' },
-      { icon: 'dumbbell', title: 'CrossFit', body: 'Before work, most weeks. Showing up when it is hard turns out to be a transferable skill.' },
+      { icon: 'dumbbell', title: 'CrossFit', body: 'After work, most weeks. Showing up when it is hard turns out to be a transferable skill.' },
       { icon: 'football', title: 'Football', body: 'Weekend league. Nobody scores alone, and nobody ships alone either.' },
     ],
   },

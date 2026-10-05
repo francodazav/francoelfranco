@@ -130,7 +130,7 @@ export const es: Content = {
     languagesNote: 'Colombo-venezolano, estudié en México y Venezuela. Hoy construyo para clínicas veterinarias; antes, para escuelas en Ecuador.',
     offTheClock: [
       { icon: 'mic', title: 'Stand-up', body: 'Cinco minutos, sin apuntes, y una sala que tiene que reírse. El mejor entrenamiento que he tenido para las dailies.' },
-      { icon: 'dumbbell', title: 'CrossFit', body: 'Antes del trabajo, casi todas las semanas. Aparecer cuando cuesta resulta ser una habilidad transferible.' },
+      { icon: 'dumbbell', title: 'CrossFit', body: 'Después del trabajo, casi todas las semanas. Aparecer cuando cuesta resulta ser una habilidad transferible.' },
       { icon: 'football', title: 'Fútbol', body: 'Liga de fin de semana. Nadie marca solo, y nadie entrega solo tampoco.' },
     ],
   },
