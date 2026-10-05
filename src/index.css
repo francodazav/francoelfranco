@@ -143,8 +143,25 @@
     outline-offset: 2px;
   }
   @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    html {
+      scroll-behavior: auto;
+    }
+    /* Collapsing the duration alone leaves an infinite animation cycling at
+       0.01ms, which is worse than the motion it replaces - the iteration
+       count has to come down with it. */
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    /* A once-through blink would settle on the dim keyframe, so opt the
+       cursor out entirely and leave it lit. */
+    .wordmark-cursor {
+      animation: none !important;
+      opacity: 1 !important;
+    }
   }
 }
 
@@ -195,5 +212,46 @@
   p {
     text-wrap: pretty;
     hyphens: auto;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Wordmark reveal. Characters are staggered by opacity rather than by
+   animating a width: each glyph holds its space from the first frame, so
+   nothing reflows and the cursor does not slide. The global
+   prefers-reduced-motion rule collapses the duration, and because the
+   keyframe fills forwards the text still lands fully opaque.
+   --------------------------------------------------------------------------- */
+
+@keyframes wordmark-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@layer components {
+  .wordmark-char {
+    display: inline-block;
+    opacity: 0;
+    animation: wordmark-in 220ms ease-out forwards;
+  }
+  .wordmark-cursor {
+    animation: cursor-blink 1.1s steps(1, end) 900ms infinite;
   }
 }

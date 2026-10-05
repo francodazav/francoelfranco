@@ -6,6 +6,7 @@ import { bindShortWords } from '../lib/typography'
 import { Icon } from './Icon'
 import { LangToggle } from './LangToggle'
 import { ThemeToggle } from './ThemeToggle'
+import { Wordmark } from './Wordmark'
 import avatar from '../assets/franco.png'
 
 function Terminal() {
@@ -61,10 +62,12 @@ export function Hero() {
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between px-5 sm:h-[72px] sm:px-16">
-          <a href="#top" className="flex shrink-0 items-center gap-2.5 whitespace-nowrap py-3 font-mono text-sm font-medium tracking-tight text-ink sm:text-[15px]">
-            <span>{content.name}</span>
-            <span className="inline-block h-4 w-[9px] bg-accent" />
-          </a>
+          <h1 className="m-0 shrink-0 text-sm font-medium sm:text-[15px]">
+            <a href="#top" className="flex items-center gap-2.5 whitespace-nowrap py-3 font-mono tracking-tight text-ink">
+              <Wordmark name={content.name} />
+              <span className="wordmark-cursor inline-block h-4 w-[9px] bg-accent" />
+            </a>
+          </h1>
           <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-8 font-mono text-[13px] md:flex">
               {content.nav.map((n) => (
@@ -121,9 +124,9 @@ export function Hero() {
             <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs">
               {content.role} · {content.location}
             </div>
-            <h1 className="m-0 max-w-[580px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em]">
+            <h2 className="m-0 max-w-[580px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em]">
               {bindShortWords(content.hero.headline, lang)}
-            </h1>
+            </h2>
             <p className="m-0 max-w-[500px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg">
               {content.hero.sub}
             </p>
