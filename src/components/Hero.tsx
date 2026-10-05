@@ -27,24 +27,24 @@ function Terminal() {
           />
           <div className="flex min-w-0 flex-col gap-1">
             <div className="text-ink-4">{content.whoami.prompt}</div>
-            <div className="text-ink-term">
+            <div className="font-bold text-ink-term">
               {content.whoami.line1.replace('{age}', String(ageOn(BIRTH_DATE)))}
             </div>
-            <div className="text-ink-term">{content.whoami.line2}</div>
+            <div className="font-bold text-ink-term">{content.whoami.line2}</div>
             <div className="text-[11px] text-ink-3 sm:text-xs">{content.whoami.line3}</div>
           </div>
         </div>
         {content.terminal.map((row) => (
           <div key={row.prompt} className={row.hideOnMobile ? 'hidden sm:block' : undefined}>
             <div className="text-ink-4">{row.prompt}</div>
-            <div className={row.tone === 'accent' ? 'text-accent-ink' : 'text-ink-term'}>
+            <div className={row.tone === 'accent' ? 'font-bold text-accent-ink' : 'font-bold text-ink-term'}>
               {row.value}
             </div>
           </div>
         ))}
         <div>
           <div className="text-ink-4">{content.status.prompt}</div>
-          <div className="break-all text-warm">
+          <div className="break-all font-bold text-warm">
             {content.status.value} {content.email}
             <span className="ml-1.5 inline-block h-[15px] w-2 translate-y-[2px] bg-accent" />
           </div>
