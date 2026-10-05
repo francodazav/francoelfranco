@@ -33,7 +33,7 @@ export const en: Content = {
     line3: 'junior full-stack · @covet',
   },
   terminal: [
-    { prompt: '$ experience', value: '2y 10m  →  digidea apps (1y 10m) · covet (1y)' },
+    { prompt: '$ experience', value: '1y 10m  ·  digidea apps (agency) → covet (main client)' },
     { prompt: '$ stack --core', value: 'react.ts · nest.js · express.ts · flutter', tone: 'accent' },
     { prompt: '$ stack --cloud', value: 'gcloud · firestore · algolia · postmark', tone: 'accent', hideOnMobile: true },
     { prompt: '$ lang', value: 'es native · en b2' },
@@ -60,11 +60,11 @@ export const en: Content = {
   work: {
     eyebrow: '// work',
     heading: 'Two products, real users.',
-    meta: 'Nearly 3 years · web, mobile & API',
+    meta: '1y 10m at Digidea Apps · web, mobile & API',
     items: [
       {
         title: 'CoVet',
-        role: 'Junior full-stack developer · 2025 — present',
+        role: 'Junior full-stack developer, via Digidea Apps · 2025 — present',
         tag: 'Flutter · NestJS · GCP',
         body: 'An AI copilot for veterinarians — it listens to the consult and writes the clinical record, so vets spend their evening at home instead of on paperwork. I work across all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console. I joined while the product was built in FlutterFlow and was part of the team’s move onto a hand-written Flutter codebase.',
         bullets: [
@@ -76,8 +76,8 @@ export const en: Content = {
         chips: ['Flutter', 'Dart', 'Nest.js', 'TypeScript', 'Firestore', 'Google Cloud', 'Algolia', 'Postmark'],
       },
       {
-        title: 'Atlas — Digidea Apps',
-        role: 'Full-stack developer · 2024 — 2025',
+        title: 'Atlas',
+        role: 'Full-stack developer, via Digidea Apps · 2024 — 2025',
         tag: 'Ecuador · EdTech',
         body: 'An app used by teachers across Ecuador. I implemented the flow that generates student grades for the 2024–2025 national scholarship programme — the calculation a teacher runs once and cannot get wrong, because a scholarship depends on it.',
         bullets: [],

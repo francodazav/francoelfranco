@@ -26,11 +26,11 @@ const EN = {
     interests: 'Interests',
   },
   profile:
-    'Full-stack developer with nearly three years shipping production software across web, mobile and API. Currently at CoVet, an AI copilot that writes veterinary clinical records, working in all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console.',
+    'Full-stack developer, a year and ten months with Digidea Apps, an agency, currently placed with its client CoVet — an AI copilot that writes veterinary clinical records, working in all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console.',
   jobs: [
     {
       org: 'CoVet',
-      title: 'Junior Full-Stack Developer',
+      title: 'Junior Full-Stack Developer · via Digidea Apps',
       dates: '2025 – present',
       note: 'AI copilot that writes veterinary clinical records.',
       stack: 'Flutter · Dart · Nest.js · TypeScript · Google Cloud · Firestore · Algolia · Postmark',
@@ -43,10 +43,10 @@ const EN = {
       ],
     },
     {
-      org: 'Digidea Apps',
-      title: 'Full-Stack Developer',
+      org: 'Atlas',
+      title: 'Full-Stack Developer · via Digidea Apps',
       dates: '2024 – 2025',
-      note: 'Atlas, an app used by teachers across Ecuador.',
+      note: 'An app used by teachers across Ecuador.',
       stack: '',
       bullets: [
         'Implemented the flow that generates student grades for Ecuador’s 2024–2025 national scholarship programme — a calculation a teacher runs once and cannot get wrong, because a scholarship depends on it.',
@@ -83,11 +83,11 @@ const ES = {
     interests: 'Intereses',
   },
   profile:
-    'Desarrollador full-stack con casi tres años entregando software en producción en web, móvil y API. Actualmente en CoVet, un copiloto de IA que escribe historias clínicas veterinarias, trabajando en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás y la consola de administración interna.',
+    'Desarrollador full-stack, un año y diez meses en Digidea Apps, una agencia, actualmente asignado a su cliente CoVet — un copiloto de IA que escribe historias clínicas veterinarias, trabajando en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás y la consola de administración interna.',
   jobs: [
     {
       org: 'CoVet',
-      title: 'Desarrollador Full-Stack Junior',
+      title: 'Desarrollador Full-Stack Junior · vía Digidea Apps',
       dates: '2025 – presente',
       note: 'Copiloto de IA que escribe historias clínicas veterinarias.',
       stack: 'Flutter · Dart · Nest.js · TypeScript · Google Cloud · Firestore · Algolia · Postmark',
@@ -100,10 +100,10 @@ const ES = {
       ],
     },
     {
-      org: 'Digidea Apps',
-      title: 'Desarrollador Full-Stack',
+      org: 'Atlas',
+      title: 'Desarrollador Full-Stack · vía Digidea Apps',
       dates: '2024 – 2025',
-      note: 'Atlas, una app que usan docentes en todo Ecuador.',
+      note: 'Una app que usan docentes en todo Ecuador.',
       stack: '',
       bullets: [
         'Implementé el flujo que genera las notas de los estudiantes para el programa nacional de becas 2024–2025 de Ecuador: un cálculo que un docente corre una sola vez y no puede equivocarse, porque de eso depende una beca.',

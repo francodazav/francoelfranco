@@ -37,7 +37,7 @@ export const es: Content = {
     line3: 'full-stack junior · @covet',
   },
   terminal: [
-    { prompt: '$ experiencia', value: '2a 10m  →  digidea apps (1a 10m) · covet (1a)' },
+    { prompt: '$ experiencia', value: '1a 10m  ·  digidea apps (agencia) → covet (cliente principal)' },
     { prompt: '$ stack --core', value: 'react.ts · nest.js · express.ts · flutter', tone: 'accent' },
     { prompt: '$ stack --cloud', value: 'gcloud · firestore · algolia · postmark', tone: 'accent', hideOnMobile: true },
     { prompt: '$ idiomas', value: 'es nativo · en b2' },
@@ -64,11 +64,11 @@ export const es: Content = {
   work: {
     eyebrow: '// trabajo',
     heading: 'Dos productos, usuarios reales.',
-    meta: 'Casi 3 años · web, móvil y API',
+    meta: '1a 10m en Digidea Apps · web, móvil y API',
     items: [
       {
         title: 'CoVet',
-        role: 'Desarrollador full-stack junior · 2025 — presente',
+        role: 'Desarrollador full-stack junior, vía Digidea Apps · 2025 — presente',
         tag: 'Flutter · NestJS · GCP',
         body: 'Un copiloto de IA para veterinarios: escucha la consulta y escribe la historia clínica, para que el veterinario pase la tarde en su casa y no llenando papeles. Trabajo en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás, y la consola de administración interna. Entré cuando el producto estaba hecho en FlutterFlow y fui parte del equipo que lo movió a un código Flutter escrito a mano.',
         bullets: [
@@ -80,8 +80,8 @@ export const es: Content = {
         chips: ['Flutter', 'Dart', 'Nest.js', 'TypeScript', 'Firestore', 'Google Cloud', 'Algolia', 'Postmark'],
       },
       {
-        title: 'Atlas — Digidea Apps',
-        role: 'Desarrollador full-stack · 2024 — 2025',
+        title: 'Atlas',
+        role: 'Desarrollador full-stack, vía Digidea Apps · 2024 — 2025',
         tag: 'Ecuador · EdTech',
         body: 'Una app que usan docentes en todo Ecuador. Implementé el flujo que genera las notas de los estudiantes para el programa nacional de becas 2024–2025 — el cálculo que un docente corre una sola vez y no puede equivocarse, porque de eso depende una beca.',
         bullets: [],
