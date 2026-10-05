@@ -1,6 +1,7 @@
 import { cvHref, isExternal, links } from '../content/links'
 import { useContent, useLang } from '../lib/lang'
 import { bindShortWords } from '../lib/typography'
+import { CopyEmail } from './CopyEmail'
 import { Icon } from './Icon'
 
 export function Contact() {
@@ -22,13 +23,16 @@ export function Contact() {
         {c.sub}
       </p>
 
-      <a
-        href={`mailto:${content.email}`}
-        className="mt-7 inline-flex min-h-11 max-w-full items-center self-start break-all border-b-2 border-border pb-2 font-mono transition-colors hover:border-accent text-[19px] font-medium tracking-[-0.02em] text-accent-ink sm:mt-8 sm:text-[26px] lg:text-[34px]"
-      >
-        {content.email}
-        <span className="ml-3 inline-block h-[22px] w-3 shrink-0 bg-accent sm:h-[30px] sm:w-4" />
-      </a>
+      <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-8">
+        <a
+          href={`mailto:${content.email}`}
+          className="inline-flex min-h-11 max-w-full items-center break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink transition-colors hover:border-accent sm:text-[26px] lg:text-[34px]"
+        >
+          {content.email}
+          <span className="caret ml-3 inline-block h-[22px] w-3 shrink-0 bg-accent sm:h-[30px] sm:w-4" />
+        </a>
+        <CopyEmail value={content.email} copyLabel={c.copy} copiedLabel={c.copied} />
+      </div>
 
       <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:gap-3">
         {c.links.map((l) => (

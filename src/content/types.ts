@@ -51,6 +51,6 @@ export type Content = {
   contact: {
     eyebrow: string; heading: string; sub: string
     links: { id: LinkId; label: string }[]
-    cv: string; footerLeft: string; footerRight: string
+    cv: string; copy: string; copied: string; footerLeft: string; footerRight: string
   }
 }

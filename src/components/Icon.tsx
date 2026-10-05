@@ -2,7 +2,7 @@ type Props = { name: IconName; size?: number; className?: string }
 
 export type IconName =
   | 'mic' | 'dumbbell' | 'football' | 'github' | 'linkedin'
-  | 'download' | 'menu' | 'sun' | 'moon' | 'monitor'
+  | 'download' | 'menu' | 'sun' | 'moon' | 'monitor' | 'copy' | 'check'
 
 const paths: Record<IconName, React.ReactNode> = {
   mic: <><rect x="9" y="2" width="6" height="11" rx="3" /><path d="M5 10v1a7 7 0 0 0 14 0v-1" /><path d="M12 18v4" /><path d="M8 22h8" /></>,
@@ -15,6 +15,8 @@ const paths: Record<IconName, React.ReactNode> = {
   sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" /></>,
   moon: <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />,
   monitor: <><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8" /><path d="M12 17v4" /></>,
+  copy: <><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" /></>,
+  check: <path d="M20 6 9 17l-5-5" />,
 }
 
 export function Icon({ name, size = 24, className }: Props) {

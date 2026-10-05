@@ -65,7 +65,7 @@ export function Hero() {
           <h1 className="m-0 shrink-0 text-sm font-medium sm:text-[15px]">
             <a href="#top" className="flex items-center gap-2.5 whitespace-nowrap py-3 font-mono tracking-tight text-ink">
               <Wordmark name={content.name} />
-              <span className="wordmark-cursor inline-block h-4 w-[9px] bg-accent" />
+              <span className="caret inline-block h-4 w-[9px] bg-accent" />
             </a>
           </h1>
           <div className="flex items-center gap-3">

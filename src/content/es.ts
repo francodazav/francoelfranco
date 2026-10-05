@@ -143,6 +143,8 @@ export const es: Content = {
       { id: 'linkedin', label: 'LinkedIn' },
     ],
     cv: 'Descargar CV',
+    copy: 'Copiar correo',
+    copied: 'Copiado',
     footerLeft: 'Franco Daza · Colombia / Venezuela',
     footerRight: 'es / en',
   },
