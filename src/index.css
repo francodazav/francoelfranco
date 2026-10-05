@@ -199,7 +199,21 @@
     min-height: calc(100dvh - var(--header-h));
     display: flex;
     flex-direction: column;
+    /* Distribute the blocks rather than clustering them: on a tall screen,
+       centring short content leaves a void between the header and the first
+       heading. Sections with more content than one screen have no free space
+       to distribute, so this is a no-op for them. */
+    justify-content: space-between;
+  }
+  /* The hero holds a single row, so there is nothing to distribute - it would
+     just sit at the top with the whole void below it. It stays centred and
+     caps its height instead: on a 1300px screen, centring in a full 1228px
+     put the headline halfway down the viewport. Capped, it starts near the
+     top and the next section peeks, which reads as an invitation to scroll
+     rather than a gap. */
+  .screen-center {
     justify-content: center;
+    min-height: min(calc(100dvh - var(--header-h)), 820px);
   }
 }
 

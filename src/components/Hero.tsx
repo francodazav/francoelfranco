@@ -118,7 +118,7 @@ export function Hero() {
         ) : null}
       </header>
 
-      <section id="top" className="screen mx-auto max-w-[1280px] 2xl:max-w-[1536px] px-5 py-8 sm:px-16 sm:py-12 2xl:py-16">
+      <section id="top" className="screen screen-center mx-auto max-w-[1280px] 2xl:max-w-[1536px] px-5 py-8 sm:px-16 sm:py-12 2xl:py-16">
         <div className="flex flex-col gap-7 xl:flex-row xl:items-center xl:gap-14 2xl:gap-20">
           <div className="flex flex-col gap-4 sm:gap-6 xl:flex-1">
             <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs 2xl:text-[13px]">
