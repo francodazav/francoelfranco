@@ -4,7 +4,7 @@ import { useContent } from '../lib/lang'
 
 const icons: Record<Theme, IconName> = { light: 'sun', dark: 'moon', system: 'monitor' }
 
-export function ThemeToggle() {
+export function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { theme, setTheme } = useTheme()
   const content = useContent()
   const labels = content.themeLabels
@@ -25,7 +25,8 @@ export function ThemeToggle() {
             aria-label={labels[t]}
             onClick={() => setTheme(t)}
             className={[
-              'flex h-11 w-11 items-center justify-center rounded-full transition-colors sm:h-8 sm:w-8',
+              'flex items-center justify-center rounded-full transition-colors',
+              compact ? 'h-8 w-8' : 'h-11 w-11',
               active ? 'bg-s3 text-ink' : 'text-ink-3 hover:text-ink',
             ].join(' ')}
           >

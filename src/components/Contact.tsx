@@ -22,7 +22,7 @@ export function Contact() {
 
       <a
         href={`mailto:${content.email}`}
-        className="mt-7 inline-flex max-w-full items-center self-start break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink sm:mt-8 sm:text-[26px] lg:text-[34px]"
+        className="mt-7 inline-flex min-h-11 max-w-full items-center self-start break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink sm:mt-8 sm:text-[26px] lg:text-[34px]"
       >
         {content.email}
         <span className="ml-3 inline-block h-[22px] w-3 shrink-0 bg-accent sm:h-[30px] sm:w-4" />

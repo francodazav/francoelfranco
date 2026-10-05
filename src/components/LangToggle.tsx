@@ -3,7 +3,7 @@ import { LANGS, useContent, useLang } from '../lib/lang'
 const names: Record<string, string> = { en: 'EN', es: 'ES' }
 const full: Record<string, string> = { en: 'English', es: 'Español' }
 
-export function LangToggle() {
+export function LangToggle({ compact = false }: { compact?: boolean }) {
   const { lang, setLang } = useLang()
   const content = useContent()
   return (
@@ -24,7 +24,8 @@ export function LangToggle() {
             lang={l}
             onClick={() => setLang(l)}
             className={[
-              'flex h-11 items-center justify-center rounded-full px-3 font-mono text-[11px] font-medium tracking-wider transition-colors sm:h-8',
+              'flex items-center justify-center rounded-full px-3 font-mono text-[11px] font-medium tracking-wider transition-colors',
+              compact ? 'h-8' : 'h-11',
               active ? 'bg-s3 text-ink' : 'text-ink-3 hover:text-ink',
             ].join(' ')}
           >

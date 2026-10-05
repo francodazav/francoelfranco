@@ -59,21 +59,21 @@ export function Hero() {
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between px-5 sm:h-[72px] sm:px-16">
-          <a href="#top" className="flex shrink-0 items-center gap-2.5 whitespace-nowrap font-mono text-sm font-medium tracking-tight text-ink sm:text-[15px]">
+          <a href="#top" className="flex shrink-0 items-center gap-2.5 whitespace-nowrap py-3 font-mono text-sm font-medium tracking-tight text-ink sm:text-[15px]">
             <span>franco daza</span>
             <span className="inline-block h-4 w-[9px] bg-accent" />
           </a>
           <div className="flex items-center gap-3">
             <nav className="hidden items-center gap-8 font-mono text-[13px] md:flex">
               {content.nav.map((n) => (
-                <a key={n.id} href={`#${n.id}`} className="text-ink-2 transition-colors hover:text-ink">
+                <a key={n.id} href={`#${n.id}`} className="flex h-11 items-center text-ink-2 transition-colors hover:text-ink">
                   {n.label}
                 </a>
               ))}
             </nav>
             <div className="hidden items-center gap-2 lg:flex">
-              <LangToggle />
-              <ThemeToggle />
+              <LangToggle compact />
+              <ThemeToggle compact />
             </div>
             <button
               type="button"
