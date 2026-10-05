@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ageOn, BIRTH_DATE } from '../lib/age'
-import { links } from '../content/links'
+import { cvHref } from '../content/links'
 import { useContent, useLang } from '../lib/lang'
 import { bindShortWords } from '../lib/typography'
 import { Icon } from './Icon'
@@ -61,7 +61,7 @@ export function Hero() {
   return (
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
-        <div className="flex h-14 items-center justify-between px-5 sm:h-[72px] sm:px-16">
+        <div className="flex h-14 items-center justify-between px-5 sm:h-[72px] sm:px-8">
           <h1 className="m-0 shrink-0 text-sm font-medium sm:text-[15px]">
             <a href="#top" className="flex items-center gap-2.5 whitespace-nowrap py-3 font-mono tracking-tight text-ink">
               <Wordmark name={content.name} />
@@ -93,7 +93,7 @@ export function Hero() {
           </div>
         </div>
         {open ? (
-          <nav id="mobile-nav" className="flex flex-col border-t border-line px-5 pb-3 lg:hidden">
+          <nav id="mobile-nav" className="flex flex-col border-t border-line px-5 pb-3 sm:px-8 lg:hidden">
             {content.nav.map((n) => (
               <a
                 key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
@@ -134,7 +134,7 @@ export function Hero() {
               <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md">
                 {content.hero.primary}
               </a>
-              <a href={links.cv} className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md">
+              <a href={cvHref(lang)} download className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md">
                 <Icon name="download" size={17} />
                 {content.hero.secondary}
               </a>

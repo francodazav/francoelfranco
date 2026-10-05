@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Franco Daza — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 9.3pt; line-height: 1.42; color: #14180F;
+  }
+  a { color: #2F6B31; text-decoration: none; }
+  .name { margin: 0; font-size: 23pt; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  .role { margin: 2pt 0 0; font-family: 'JetBrains Mono', monospace; font-size: 9pt;
+          letter-spacing: 0.1em; text-transform: uppercase; color: #2F6B31; }
+  .contact { margin: 6pt 0 0; font-family: 'JetBrains Mono', monospace; font-size: 8.2pt; color: #4A4E44; }
+  .contact span + span::before { content: ' · '; color: #9AA093; }
+  h2 { margin: 11pt 0 4.5pt; padding-bottom: 2.5pt; border-bottom: 0.8pt solid #D7DCD0;
+       font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 700;
+       letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B31; }
+  p { margin: 0; text-wrap: pretty; }
+  .job { margin-top: 7pt; page-break-inside: avoid; }
+  .job:first-of-type { margin-top: 0; }
+  .jobhead { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+  .org { font-size: 11pt; font-weight: 700; }
+  .title { font-weight: 500; color: #3C4136; }
+  .dates { font-family: 'JetBrains Mono', monospace; font-size: 8.2pt; color: #4A4E44; white-space: nowrap; }
+  .note { margin: 1.5pt 0 0; color: #4A4E44; }
+  .stack { margin: 2pt 0 0; font-family: 'JetBrains Mono', monospace; font-size: 7.8pt; color: #5D6356; }
+  ul { margin: 4pt 0 0; padding-left: 11pt; }
+  li { margin: 0 0 2.5pt; text-wrap: pretty; }
+  li::marker { color: #62BA61; }
+  .row { display: flex; gap: 8pt; margin-bottom: 2.5pt; }
+  .row .k { flex: 0 0 62pt; font-family: 'JetBrains Mono', monospace; font-size: 8pt;
+            letter-spacing: 0.06em; text-transform: uppercase; color: #5D6356; padding-top: 0.5pt; }
+  .row .v { flex: 1; }
+  .edu { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; margin-bottom: 3pt; }
+  .edu b { font-weight: 600; }
+  .edu .where { font-family: 'JetBrains Mono', monospace; font-size: 8.2pt; color: #5D6356; }
+  .edu .det { font-family: 'JetBrains Mono', monospace; font-size: 8.2pt; color: #2F6B31; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="name">Franco Daza</h1>
+    <p class="role">Desarrollador Full-Stack Junior</p>
+    <p class="contact"><span><a href="mailto:francodazav@gmail.com">francodazav@gmail.com</a></span><span><a href="https://www.linkedin.com/in/francoelfranco">linkedin.com/in/francoelfranco</a></span><span>Colombo-venezolano</span><span>Remoto</span><span>Un&nbsp;mes&nbsp;de&nbsp;preaviso</span></p>
+  </header>
+
+  <h2>Perfil</h2>
+  <p>Desarrollador full-stack con dos años y medio entregando software en producción en web, móvil y API. Actualmente en CoVet, un copiloto de IA que escribe historias clínicas veterinarias, trabajando en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás y la consola de administración interna.</p>
+
+  <h2>Experiencia</h2>
+  <div class="job">
+    <div class="jobhead"><div><span class="org">CoVet</span> — <span class="title">Desarrollador Full-Stack Junior</span></div><div class="dates">2025 – presente</div></div>
+    <p class="note">Copiloto de IA que escribe historias clínicas veterinarias.</p>
+    <p class="stack">Flutter · Dart · Nest.js · TypeScript · Google Cloud · Firestore · Algolia · Postmark</p>
+    <ul><li>Lideré el rediseño de las páginas de salida —las pantallas donde el veterinario lee, edita, comparte y exporta una historia generada— entregado en seis incrementos detrás de un feature flag.</li><li>Construí el odontograma de punta a punta: la interfaz en Flutter y, en el backend, un generador de PDF que produce una versión clínica y otra para el cliente.</li><li>Extendí roles y permisos en API, app y consola de administración: cuentas de soporte, enterprise, pasantes y escuelas de veterinaria.</li><li>Entregué integraciones con sistemas de gestión veterinaria: un tablero de métricas con exportación a CSV y exportación de historias directo al sistema de la clínica.</li><li>Entré cuando el producto estaba hecho en FlutterFlow y fui parte del equipo que lo migró a un código Flutter escrito a mano.</li></ul>
+  </div>
+  <div class="job">
+    <div class="jobhead"><div><span class="org">Digidea Apps</span> — <span class="title">Desarrollador Full-Stack</span></div><div class="dates">2024 – 2025</div></div>
+    <p class="note">Atlas, una app que usan docentes en todo Ecuador.</p>
+    
+    <ul><li>Implementé el flujo que genera las notas de los estudiantes para el programa nacional de becas 2024–2025 de Ecuador: un cálculo que un docente corre una sola vez y no puede equivocarse, porque de eso depende una beca.</li></ul>
+  </div>
+
+  <h2>Tecnologías</h2>
+  <div class="row"><div class="k">Cliente</div><div class="v">React.ts · Flutter · FlutterFlow · HTML · CSS · JavaScript</div></div>
+  <div class="row"><div class="k">API</div><div class="v">Nest.js · Express.ts · TypeScript</div></div>
+  <div class="row"><div class="k">Plataforma</div><div class="v">Google Cloud · Firestore · Algolia · Postmark</div></div>
+  <div class="row"><div class="k">Herramientas</div><div class="v">Postman · Insomnia · Firefoo</div></div>
+
+  <h2>Formación</h2>
+  <div class="edu"><div><b>Ingeniería en Computación</b> <span class="where">— UABC · México</span></div><div class="det">6 semestres</div></div>
+  <div class="edu"><div><b>Ingeniería en Computación</b> <span class="where">— UNET · Venezuela</span></div><div class="det">3 semestres</div></div>
+  <div class="edu"><div><b>HTML, CSS y JavaScript</b> <span class="where">— freeCodeCamp</span></div><div class="det">Certificado</div></div>
+
+  <h2>Idiomas</h2>
+  <div class="row"><div class="k">Español</div><div class="v">Nativo</div></div>
+  <div class="row"><div class="k">Inglés</div><div class="v">B2</div></div>
+
+  <h2>Intereses</h2>
+  <p>Stand-up: he hecho funciones en Venezuela, Colombia y México. CrossFit después del trabajo. Fútbol de fin de semana.</p>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { isExternal, links } from '../content/links'
+import { cvHref, isExternal, links } from '../content/links'
 import { useContent, useLang } from '../lib/lang'
 import { bindShortWords } from '../lib/typography'
 import { Icon } from './Icon'
@@ -45,7 +45,8 @@ export function Contact() {
           </a>
         ))}
         <a
-          href={links.cv}
+          href={cvHref(lang)}
+          download
           className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg bg-accent px-[22px] text-[15px] font-semibold text-on-accent sm:h-12 sm:justify-start sm:rounded-md"
         >
           <Icon name="download" size={18} />
