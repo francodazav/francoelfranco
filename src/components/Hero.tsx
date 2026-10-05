@@ -12,7 +12,7 @@ import avatar from '../assets/franco.png'
 function Terminal() {
   const content = useContent()
   return (
-    <div className="overflow-hidden rounded-[10px] border border-border bg-terminal lg:w-[476px] lg:shrink-0">
+    <div className="w-full max-w-[640px] overflow-hidden rounded-[10px] border border-border bg-terminal xl:w-[476px] xl:max-w-none xl:shrink-0">
       <div className="flex h-10 items-center gap-[7px] border-b border-line px-4">
         <span className="h-[9px] w-[9px] rounded-sm bg-dots" />
         <span className="h-[9px] w-[9px] rounded-sm bg-dots" />
@@ -97,7 +97,7 @@ export function Hero() {
             {content.nav.map((n) => (
               <a
                 key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
-                className="flex h-12 items-center font-mono text-sm text-ink-2 md:hidden"
+                className="flex h-12 items-center font-mono text-sm text-ink-2 transition-colors hover:text-ink md:hidden"
               >
                 {n.label}
               </a>
@@ -119,8 +119,8 @@ export function Hero() {
       </header>
 
       <section id="top" className="screen mx-auto max-w-[1280px] px-5 py-8 sm:px-16 sm:py-12">
-        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:gap-14">
-          <div className="flex flex-col gap-4 sm:gap-6 lg:flex-1">
+        <div className="flex flex-col gap-7 xl:flex-row xl:items-center xl:gap-14">
+          <div className="flex flex-col gap-4 sm:gap-6 xl:flex-1">
             <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs">
               {content.role} · {content.location}
             </div>
@@ -131,10 +131,10 @@ export function Hero() {
               {content.hero.sub}
             </p>
             <div className="flex flex-col gap-2.5 pt-1.5 sm:flex-row sm:gap-3.5">
-              <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md">
+              <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md transition-colors hover:bg-accent-hover">
                 {content.hero.primary}
               </a>
-              <a href={cvHref(lang)} download className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md">
+              <a href={cvHref(lang)} download className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md transition-colors hover:border-border hover:bg-s2">
                 <Icon name="download" size={17} />
                 {content.hero.secondary}
               </a>

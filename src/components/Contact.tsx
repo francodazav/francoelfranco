@@ -24,7 +24,7 @@ export function Contact() {
 
       <a
         href={`mailto:${content.email}`}
-        className="mt-7 inline-flex min-h-11 max-w-full items-center self-start break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink sm:mt-8 sm:text-[26px] lg:text-[34px]"
+        className="mt-7 inline-flex min-h-11 max-w-full items-center self-start break-all border-b-2 border-border pb-2 font-mono transition-colors hover:border-accent text-[19px] font-medium tracking-[-0.02em] text-accent-ink sm:mt-8 sm:text-[26px] lg:text-[34px]"
       >
         {content.email}
         <span className="ml-3 inline-block h-[22px] w-3 shrink-0 bg-accent sm:h-[30px] sm:w-4" />
@@ -38,7 +38,7 @@ export function Contact() {
             {...(isExternal(links[l.id])
               ? { target: '_blank', rel: 'noopener noreferrer' }
               : {})}
-            className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg border border-border-btn px-[22px] text-[15px] font-medium text-ink sm:h-12 sm:justify-start sm:rounded-md"
+            className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg border border-border-btn px-[22px] text-[15px] font-medium text-ink sm:h-12 sm:justify-start sm:rounded-md transition-colors hover:border-border hover:bg-s2"
           >
             <Icon name={l.id} size={18} />
             {l.label}
@@ -47,7 +47,7 @@ export function Contact() {
         <a
           href={cvHref(lang)}
           download
-          className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg bg-accent px-[22px] text-[15px] font-semibold text-on-accent sm:h-12 sm:justify-start sm:rounded-md"
+          className="flex h-[50px] items-center justify-center gap-2.5 rounded-lg bg-accent px-[22px] text-[15px] font-semibold text-on-accent sm:h-12 sm:justify-start sm:rounded-md transition-colors hover:bg-accent-hover"
         >
           <Icon name="download" size={18} />
           {c.cv}
