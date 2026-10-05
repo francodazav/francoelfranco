@@ -26,7 +26,7 @@ const EN = {
     interests: 'Interests',
   },
   profile:
-    'Full-stack developer with two and a half years shipping production software across web, mobile and API. Currently at CoVet, an AI copilot that writes veterinary clinical records, working in all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console.',
+    'Full-stack developer with nearly three years shipping production software across web, mobile and API. Currently at CoVet, an AI copilot that writes veterinary clinical records, working in all three codebases: the Flutter app clinics use, the TypeScript API behind it, and the internal admin console.',
   jobs: [
     {
       org: 'CoVet',
@@ -83,7 +83,7 @@ const ES = {
     interests: 'Intereses',
   },
   profile:
-    'Desarrollador full-stack con dos años y medio entregando software en producción en web, móvil y API. Actualmente en CoVet, un copiloto de IA que escribe historias clínicas veterinarias, trabajando en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás y la consola de administración interna.',
+    'Desarrollador full-stack con casi tres años entregando software en producción en web, móvil y API. Actualmente en CoVet, un copiloto de IA que escribe historias clínicas veterinarias, trabajando en los tres repositorios: la app en Flutter que usan las clínicas, la API en TypeScript detrás y la consola de administración interna.',
   jobs: [
     {
       org: 'CoVet',

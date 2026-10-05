@@ -33,7 +33,7 @@ export const en: Content = {
     line3: 'junior full-stack · @covet',
   },
   terminal: [
-    { prompt: '$ experience --years', value: '2.5  →  digidea apps (1.5) · covet (1.0)' },
+    { prompt: '$ experience', value: '2y 10m  →  digidea apps (1y 10m) · covet (1y)' },
     { prompt: '$ stack --core', value: 'react.ts · nest.js · express.ts · flutter', tone: 'accent' },
     { prompt: '$ stack --cloud', value: 'gcloud · firestore · algolia · postmark', tone: 'accent', hideOnMobile: true },
     { prompt: '$ lang', value: 'es native · en b2' },
@@ -60,7 +60,7 @@ export const en: Content = {
   work: {
     eyebrow: '// work',
     heading: 'Two products, real users.',
-    meta: '2.5 years · web, mobile & API',
+    meta: 'Nearly 3 years · web, mobile & API',
     items: [
       {
         title: 'CoVet',
