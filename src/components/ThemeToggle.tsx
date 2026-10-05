@@ -27,7 +27,7 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
             className={[
               'flex items-center justify-center rounded-full transition-colors',
               compact ? 'h-8 w-8' : 'h-11 w-11',
-              active ? 'bg-s3 text-ink' : 'text-ink-3 hover:text-ink',
+              active ? 'bg-s3 text-ink' : 'text-ink-3 hover:bg-s2 hover:text-ink',
             ].join(' ')}
           >
             <Icon name={icons[t]} size={16} />

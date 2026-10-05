@@ -134,6 +134,12 @@
     color: var(--accent-ink);
     text-decoration: none;
   }
+  /* Tailwind v4 no longer sets this in preflight: without it every <button>
+     renders an arrow cursor and reads as non-interactive next to the links. */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
   ::selection {
     background: var(--accent);
     color: var(--on-accent);

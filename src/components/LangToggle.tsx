@@ -26,7 +26,7 @@ export function LangToggle({ compact = false }: { compact?: boolean }) {
             className={[
               'flex items-center justify-center rounded-full px-3 font-mono text-[11px] font-medium tracking-wider transition-colors',
               compact ? 'h-8' : 'h-11',
-              active ? 'bg-s3 text-ink' : 'text-ink-3 hover:text-ink',
+              active ? 'bg-s3 text-ink' : 'text-ink-3 hover:bg-s2 hover:text-ink',
             ].join(' ')}
           >
             {names[l]}
