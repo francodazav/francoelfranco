@@ -11,7 +11,7 @@ export function SectionHead({
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent-ink">
           {eyebrow}
         </div>
-        <h2 className="m-0 text-[28px] font-bold leading-tight tracking-[-0.03em] text-ink sm:text-[34px] lg:text-[40px]">
+        <h2 className="m-0 text-[28px] font-bold leading-tight tracking-[-0.03em] text-ink sm:text-[34px] lg:text-[40px] 2xl:text-[48px]">
           {bindShortWords(heading, lang)}
         </h2>
       </div>

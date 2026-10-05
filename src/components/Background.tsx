@@ -3,14 +3,14 @@ import { useContent } from '../lib/lang'
 import { Icon } from './Icon'
 import { SectionHead } from './SectionHead'
 
-const card = 'flex flex-col gap-3.5 rounded-2xl bg-s1 p-6 shadow-[var(--shadow-card)] sm:gap-4 sm:px-7 sm:py-7'
+const card = 'flex flex-col gap-3.5 rounded-2xl bg-s1 p-6 shadow-[var(--shadow-card)] sm:gap-4 sm:px-7 sm:py-7 2xl:gap-5 2xl:px-9 2xl:py-9'
 const cardLabel = 'font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3'
 
 export function Background() {
   const b = useContent().background
   const age = String(ageOn(BIRTH_DATE))
   return (
-    <section id="background" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
+    <section id="background" className="screen mx-auto max-w-[1280px] 2xl:max-w-[1536px] border-t border-line px-5 py-12 sm:px-16 sm:py-14 2xl:py-20">
       <SectionHead eyebrow={b.eyebrow} heading={b.heading} meta={b.meta} />
 
       <div className="mt-7 flex flex-col gap-6 sm:mt-8 lg:flex-row lg:items-stretch">
@@ -45,7 +45,7 @@ export function Background() {
               <div className="flex items-baseline gap-3">
                 <span className="h-[7px] w-[7px] shrink-0 bg-accent" />
                 <div className="flex flex-col gap-1">
-                  <div className="text-[15px] font-semibold text-ink sm:text-[17px]">{e.what}</div>
+                  <div className="text-[15px] font-semibold text-ink sm:text-[17px] 2xl:text-[19px]">{e.what}</div>
                   <div className="font-mono text-[12.5px] text-ink-3">{e.where}</div>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function Background() {
           <div className={cardLabel}>{b.languagesLabel}</div>
           {b.languages.map((l) => (
             <div key={l.name} className="flex items-baseline justify-between gap-4 border-b border-line-card pb-4">
-              <span className="text-[15px] font-semibold text-ink sm:text-[17px]">{l.name}</span>
+              <span className="text-[15px] font-semibold text-ink sm:text-[17px] 2xl:text-[19px]">{l.name}</span>
               <span className="font-mono text-[12.5px] text-accent-ink">{l.level}</span>
             </div>
           ))}

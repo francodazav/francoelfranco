@@ -31,7 +31,7 @@ export const es: Content = {
   },
 
   whoami: {
-    prompt: '$ whoami',
+    prompt: '$ quien-soy',
     line1: 'Franco Daza — {age}',
     line2: 'colombo-venezolano',
     line3: 'full-stack junior · @covet',

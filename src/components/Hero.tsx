@@ -12,18 +12,18 @@ import avatar from '../assets/franco.png'
 function Terminal() {
   const content = useContent()
   return (
-    <div className="w-full max-w-[640px] overflow-hidden rounded-[10px] border border-border bg-terminal xl:w-[476px] xl:max-w-none xl:shrink-0">
+    <div className="w-full max-w-[640px] overflow-hidden rounded-[10px] border border-border bg-terminal xl:w-[476px] xl:max-w-none xl:shrink-0 2xl:w-[580px]">
       <div className="flex h-10 items-center gap-[7px] border-b border-line px-4">
         <span className="h-[9px] w-[9px] rounded-sm bg-dots" />
         <span className="h-[9px] w-[9px] rounded-sm bg-dots" />
         <span className="h-[9px] w-[9px] rounded-sm bg-dots" />
         <span className="ml-2.5 font-mono text-[11.5px] text-ink-3">~/franco</span>
       </div>
-      <div className="flex flex-col gap-[13px] p-4 font-mono text-[11.5px] leading-relaxed sm:gap-[15px] sm:p-5 sm:text-[13px]">
+      <div className="flex flex-col gap-[13px] p-4 font-mono text-[11.5px] leading-relaxed sm:gap-[15px] sm:p-5 sm:text-[13px] 2xl:gap-5 2xl:p-6 2xl:text-[14px]">
         <div className="flex items-center gap-[13px] sm:gap-[15px]">
           <img
             src={avatar} alt={content.name} width={88} height={88}
-            className="block h-[72px] w-[72px] shrink-0 object-contain sm:h-[88px] sm:w-[88px]"
+            className="block h-[72px] w-[72px] shrink-0 object-contain sm:h-[88px] sm:w-[88px] 2xl:h-[104px] 2xl:w-[104px]"
           />
           <div className="flex min-w-0 flex-col gap-1">
             <div className="text-ink-4">{content.whoami.prompt}</div>
@@ -118,23 +118,23 @@ export function Hero() {
         ) : null}
       </header>
 
-      <section id="top" className="screen mx-auto max-w-[1280px] px-5 py-8 sm:px-16 sm:py-12">
-        <div className="flex flex-col gap-7 xl:flex-row xl:items-center xl:gap-14">
+      <section id="top" className="screen mx-auto max-w-[1280px] 2xl:max-w-[1536px] px-5 py-8 sm:px-16 sm:py-12 2xl:py-16">
+        <div className="flex flex-col gap-7 xl:flex-row xl:items-center xl:gap-14 2xl:gap-20">
           <div className="flex flex-col gap-4 sm:gap-6 xl:flex-1">
-            <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs">
+            <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent-ink sm:text-xs 2xl:text-[13px]">
               {content.role} · {content.location}
             </div>
-            <h2 className="m-0 max-w-[580px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em]">
+            <h2 className="m-0 max-w-[580px] text-[34px] 2xl:max-w-[760px] font-bold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[44px] lg:text-[58px] lg:leading-[1.04] lg:tracking-[-0.03em] 2xl:text-[74px]">
               {bindShortWords(content.hero.headline, lang)}
             </h2>
-            <p className="m-0 max-w-[500px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg">
+            <p className="m-0 max-w-[500px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg 2xl:max-w-[620px] 2xl:text-xl">
               {content.hero.sub}
             </p>
             <div className="flex flex-col gap-2.5 pt-1.5 sm:flex-row sm:gap-3.5">
-              <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md transition-colors hover:bg-accent-hover">
+              <a href="#work" className="flex h-[50px] items-center justify-center rounded-lg bg-accent px-6 text-[15px] font-semibold text-on-accent sm:h-12 sm:rounded-md 2xl:h-14 2xl:px-8 2xl:text-base transition-colors hover:bg-accent-hover">
                 {content.hero.primary}
               </a>
-              <a href={cvHref(lang)} download className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md transition-colors hover:border-border hover:bg-s2">
+              <a href={cvHref(lang)} download className="flex h-[50px] items-center justify-center gap-2 rounded-lg border border-border-btn px-6 text-[15px] font-medium text-ink sm:h-12 sm:rounded-md 2xl:h-14 2xl:px-8 2xl:text-base transition-colors hover:border-border hover:bg-s2">
                 <Icon name="download" size={17} />
                 {content.hero.secondary}
               </a>

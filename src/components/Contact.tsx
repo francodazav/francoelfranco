@@ -9,24 +9,24 @@ export function Contact() {
   const c = content.contact
   const { lang } = useLang()
   return (
-    <section id="contact" className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-12 sm:px-16 sm:py-14">
+    <section id="contact" className="screen mx-auto max-w-[1280px] 2xl:max-w-[1536px] border-t border-line px-5 py-12 sm:px-16 sm:py-14 2xl:py-20">
       <div className="flex flex-col gap-2.5">
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent-ink">
           {c.eyebrow}
         </div>
-        <h2 className="m-0 text-[32px] font-bold tracking-[-0.03em] text-ink sm:text-[44px]">
+        <h2 className="m-0 text-[32px] font-bold tracking-[-0.03em] text-ink sm:text-[44px] 2xl:text-[54px]">
           {bindShortWords(c.heading, lang)}
         </h2>
       </div>
 
-      <p className="m-0 mt-4 max-w-[560px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg">
+      <p className="m-0 mt-4 max-w-[560px] text-base leading-relaxed text-ink-2 text-pretty sm:text-lg 2xl:max-w-[660px] 2xl:text-xl">
         {c.sub}
       </p>
 
       <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 sm:mt-8">
         <a
           href={`mailto:${content.email}`}
-          className="inline-flex min-h-11 max-w-full items-center break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink transition-colors hover:border-accent sm:text-[26px] lg:text-[34px]"
+          className="inline-flex min-h-11 max-w-full items-center break-all border-b-2 border-border pb-2 font-mono text-[19px] font-medium tracking-[-0.02em] text-accent-ink transition-colors hover:border-accent sm:text-[26px] lg:text-[34px] 2xl:text-[42px]"
         >
           {content.email}
           <span className="caret ml-3 inline-block h-[22px] w-3 shrink-0 bg-accent sm:h-[30px] sm:w-4" />

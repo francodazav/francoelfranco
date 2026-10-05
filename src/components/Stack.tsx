@@ -12,14 +12,14 @@ export function Stack() {
   return (
     <section
       id="stack"
-      className="screen mx-auto max-w-[1280px] border-t border-line px-5 py-10 sm:px-16 sm:py-12"
+      className="screen mx-auto max-w-[1280px] 2xl:max-w-[1536px] border-t border-line px-5 py-10 sm:px-16 sm:py-12 2xl:py-16"
     >
       <SectionHead eyebrow={content.stackHead.eyebrow} heading={content.stackHead.heading} />
 
       <div className="mt-7 flex flex-col sm:mt-9 lg:mt-10">
         {layers.map((layer, i) => (
           <Fragment key={layer.label}>
-            <div className="flex flex-col gap-4 rounded-2xl bg-s1 p-5 shadow-[var(--shadow-card)] sm:flex-row sm:items-center sm:gap-8 sm:p-6 lg:gap-10 lg:px-8 lg:py-10">
+            <div className="flex flex-col gap-4 rounded-2xl bg-s1 p-5 shadow-[var(--shadow-card)] sm:flex-row sm:items-center sm:gap-8 sm:p-6 lg:gap-10 lg:px-8 lg:py-10 2xl:px-10 2xl:py-14">
               <div className="flex items-baseline gap-3 sm:w-[136px] sm:shrink-0">
                 <span className="font-mono text-[11px] tabular-nums text-ink-4">{layer.index}</span>
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">
