@@ -28,7 +28,7 @@ export const en: Content = {
 
   whoami: {
     prompt: '$ whoami',
-    line1: 'franco daza — {age}',
+    line1: 'Franco Daza — {age}',
     line2: 'colombian-venezuelan',
     line3: 'junior full-stack · @covet',
   },
@@ -139,7 +139,7 @@ export const en: Content = {
       { id: 'linkedin', label: 'LinkedIn' },
     ],
     cv: 'Download CV',
-    footerLeft: 'franco daza · colombia / venezuela',
+    footerLeft: 'Franco Daza · Colombia / Venezuela',
     footerRight: 'es / en',
   },
 }
