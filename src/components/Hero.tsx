@@ -61,7 +61,7 @@ export function Hero() {
   return (
     <>
       <header className="sticky top-0 z-20 border-b border-line bg-ground/90 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between px-5 sm:h-[72px] sm:px-16">
+        <div className="flex h-14 items-center justify-between px-5 sm:h-[72px] sm:px-16">
           <h1 className="m-0 shrink-0 text-sm font-medium sm:text-[15px]">
             <a href="#top" className="flex items-center gap-2.5 whitespace-nowrap py-3 font-mono tracking-tight text-ink">
               <Wordmark name={content.name} />
