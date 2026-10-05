@@ -98,7 +98,7 @@ export const es: Content = {
       'Aprendí a resolver un cubo de Rubik a los dieciséis. Lo que me atrapó no fue el cubo — fue descubrir que un desorden tiene un método detrás, y que una vez que conoces el método puedes resolver cualquier combinación, no solo la que tienes en las manos. Todavía no tenía la palabra ALGORITHM, pero ese fue el momento.',
       'En lo que soy bueno es en caer en código que nunca había visto y volverme útil rápido. En CoVet eso fueron tres repositorios en un año — una app en Flutter, una API en TypeScript y una consola de administración interna — con trabajo entregado en los tres.',
       'Estudié ingeniería en computación en la UNET en Venezuela y seguí en la UABC después de mudarme a México. A esa altura ya sabía a qué me quería dedicar, así que me fui a hacerlo.',
-      'Estoy buscando mi próximo rol. He construido móvil, web y backend, y me acomodo en cualquier punto de ese rango. Lo que me importa es entregar algo que la gente use de verdad — veterinarios que recuperan su tarde, docentes que cargan notas sin miedo.',
+      'Estoy buscando mi próximo rol. He construido móvil, web y backend, y me integro en cualquier punto de ese rango. Lo que me importa es entregar algo que la gente use de verdad — veterinarios que recuperan su tarde, docentes que cargan notas sin miedo.',
     ],
     emphasis: 'algoritmo',
     quote: 'He hecho stand-up en Venezuela, Colombia y México. Leer a un público y explicar una decisión técnica resultan ser la misma habilidad: hay que saber qué sabe ya la otra persona.',
